@@ -1,32 +1,4 @@
-<script>
-	import { i, language, switchLanguage } from '@inlang/sdk-js';
-
-	async function switchLanguageToGerman() {
-		if (language === 'en') {
-			await switchLanguage('de');
-		} else {
-			await switchLanguage('en');
-		}
-		window.location.reload();
-	}
-</script>
-
-<h2>
-	{i('welcome')}
-</h2>
-<nav>
-	<a href="/"> Home </a>
-	<a href="/{language}/about"> About </a>
-</nav>
-<br />
-<button on:click={switchLanguageToGerman}>
-	Switch language to
-	{#if language === 'en'}
-		german
-	{:else}
-		english
-	{/if}
-</button>
-<hr />
-
-<slot />
+<!-- This file was created by inlang.
+It is needed in order to circumvent a current limitation of SvelteKit. See https://github.com/inlang/inlang/issues/647
+You can remove this comment and modify the file as you like. We just need to make sure it exists.
+Please do not delete it (inlang will recreate it if needed). -->
