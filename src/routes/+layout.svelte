@@ -1,5 +1,14 @@
-<!-- This file was created by inlang.
-It is needed in order to circumvent a current limitation of SvelteKit. See https://github.com/inlang/inlang/issues/647
-You can remove this comment and modify the file as you like. We just need to make sure it exists.
-Please do not delete it (inlang will recreate it if needed). -->
+<script>
+	import { i, language, switchLanguage } from '@inlang/sdk-js';
+</script>
+
+{i('welcome')}
+<br />
+{#if language === 'en'}
+	<button on:click={() => switchLanguage('de')}> Switch to German </button>
+{/if}
+{#if language === 'de'}
+	<button on:click={() => switchLanguage('en')}> Switch to English </button>
+{/if}
+
 <slot />
